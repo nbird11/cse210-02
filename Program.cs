@@ -1,4 +1,4 @@
-﻿using System;
+﻿using CSE210_02.Game;
 
 namespace CSE210_02
 {
@@ -6,7 +6,8 @@ namespace CSE210_02
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Director director = new Director();
+            Card card = new Card();
         }
     }
 }
