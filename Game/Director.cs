@@ -1,4 +1,5 @@
 using System;
+using Game.Card;
 
 namespace CSE210_02.Game
 {
@@ -23,25 +24,32 @@ namespace CSE210_02.Game
         {
             while (_isPLaying)
             {
-                getInputs();
-                doUpdates();
-                doOutputs();
+                // outputCard();
+                getInputHL();
+                updateCard();
+                getInputPlaying();
             }
         }
 
-        public void getInputs()
+        public void getInputPlaying()
         {
             //Ask user to keep playing or not
             Console.Write("Continue playing? [y,n] ");
             keepPlaying = Console.ReadLine();
             _isPlaying = (keepPlaying == "y");
 
-            //Ask user for their guess
-            string guess = Console.Write("what is your guess?  ");
             
         }
 
-        public void doUpdates()
+        public void getInputHL()
+        {
+            //Ask user for their guess
+            Console.Write("what is your guess?  ");
+            string guess = Console.ReadLine();
+            _guess = Convert.ToInt32(guess);
+        }
+
+        public void updateCard()
         {
             if (!_isPlaying)
             {
@@ -49,6 +57,7 @@ namespace CSE210_02.Game
             }
 
             //update card and score
+
         }
 
         public void doOutputs()
