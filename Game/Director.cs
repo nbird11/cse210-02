@@ -1,5 +1,5 @@
 using System;
-using Game.Card;
+using CSE210_02.Game;
 
 namespace CSE210_02.Game
 {
@@ -22,7 +22,7 @@ namespace CSE210_02.Game
 
         public void startGame()
         {
-            while (_isPLaying)
+            while (_isPlaying)
             {
                 // outputCard();
                 getInputHL();
@@ -35,7 +35,7 @@ namespace CSE210_02.Game
         {
             //Ask user to keep playing or not
             Console.Write("Continue playing? [y,n] ");
-            keepPlaying = Console.ReadLine();
+            string keepPlaying = Console.ReadLine();
             _isPlaying = (keepPlaying == "y");
 
             
