@@ -91,8 +91,8 @@ namespace CSE210_02.Game
             {
                 //Ask user to keep playing or not
                 Console.Write("Continue playing? [y/n] ");
-                Console.WriteLine();
                 string keepPlaying = Console.ReadLine();
+                Console.WriteLine();
                 _isPlaying = (keepPlaying == "y");
             }
             else
