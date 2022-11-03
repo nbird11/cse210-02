@@ -5,22 +5,19 @@ namespace CSE210_02.Game
     public class Card
     {
         //ATTRIBUTES
-            public int lastCard;
-            public int currentCard;
+        public int _value;
+        
         //CONSTRUCTOR
         public Card()
         {
-
+            selectCard();
         }
 
-        //METHOD
-        public void selectCard(){
+        //METHODS
+        private void selectCard()
+        {
             var random = new Random();
-            currentCard = (random.Next() % 13) + 1;
-            return;
-        }
-        public void switchCard(){
-            lastCard = currentCard;
+            _value = random.Next(1, 14);
             return;
         }
     }

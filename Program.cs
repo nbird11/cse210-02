@@ -7,7 +7,7 @@ namespace CSE210_02
         public static void Main(string[] args)
         {
             Director director = new Director();
-            Card card = new Card();
+            director.startGame();
         }
     }
 }
