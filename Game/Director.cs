@@ -1,5 +1,4 @@
 using System;
-using CSE210_02.Game;
 
 namespace CSE210_02.Game
 {
