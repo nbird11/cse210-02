@@ -57,7 +57,6 @@ namespace CSE210_02.Game
 
             //update card and score
             Console.WriteLine($"Next card was: {_nextCard._value}");
-            Console.WriteLine();
 
             bool correctGuess = false;
             if (_guess == "h")
@@ -92,6 +91,7 @@ namespace CSE210_02.Game
             {
                 //Ask user to keep playing or not
                 Console.Write("Continue playing? [y/n] ");
+                Console.WriteLine();
                 string keepPlaying = Console.ReadLine();
                 _isPlaying = (keepPlaying == "y");
             }
