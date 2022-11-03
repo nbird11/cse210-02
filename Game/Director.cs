@@ -35,20 +35,20 @@ namespace CSE210_02.Game
             }
         }
 
-        public void outputCard()
+        private void outputCard()
         {
             int cardValue = _currentCard._value;
             Console.WriteLine($"The card is: {cardValue}");
         }
 
-        public void getInputHL()
+        private void getInputHL()
         {
             //Ask user for their guess
             Console.Write("Higher or lower? [h/l] ");
             _guess = Console.ReadLine();
         }
 
-        public void updates()
+        private void updates()
         {
             if (!_isPlaying)
             {
@@ -85,7 +85,7 @@ namespace CSE210_02.Game
             _nextCard = new Card();
         }
 
-        public void calculatePlaying()
+        private void calculatePlaying()
         {
             if (_totalScore > 0)
             {
