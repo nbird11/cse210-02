@@ -2,12 +2,12 @@ using System;
 
 namespace CSE210_02.Game
 {
+    // This class acts as the main director for the HILO program.
+    // Controls the game loop, input and output for the game.
     public class Director
     {
         //ATTRIBUTES
         // keeps track of inputs and the score in the game. 
-        // runs the loop and calls the functions for gam play
-
         bool _isPlaying = true;
         string _guess = "";
         int _score = 0;
@@ -22,7 +22,9 @@ namespace CSE210_02.Game
 
         }
 
-        // METHODS
+        //METHODS
+
+        // startGame is called by Main to run the game loop.
         public void startGame()
         {
             while (_isPlaying)
@@ -34,12 +36,14 @@ namespace CSE210_02.Game
             }
         }
 
+        // Displays the current card value
         private void outputCard()
         {
             int cardValue = _currentCard._value;
             Console.WriteLine($"The card is: {cardValue}");
         }
 
+        // Asks user for their guess of higher or lower
         private void getInputHL()
         {
             //Ask user for their guess
@@ -47,6 +51,9 @@ namespace CSE210_02.Game
             _guess = Console.ReadLine();
         }
 
+        // This method will compare the player's guess with the value of the next card,
+        // then calculate the score that will be added to the player's total score.
+        // It also assigns the next card to the current card object.
         private void updates()
         {
             if (!_isPlaying)
@@ -84,6 +91,7 @@ namespace CSE210_02.Game
             _nextCard = new Card();
         }
 
+        // Decide whether to continue the game or not.
         private void calculatePlaying()
         {
             if (_totalScore > 0)

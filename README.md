@@ -1,5 +1,5 @@
 # cse210-02
-This is our design for the Hilo game.
+This is our design for the Hilo game. In Hilo, you try to guess whether the next card that will be drawn is going to be of higher value or lower value than the one already on the table.
 
 ## Project Structure
 ---
